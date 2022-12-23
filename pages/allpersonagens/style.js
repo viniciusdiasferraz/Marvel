@@ -4,12 +4,6 @@ export const Container = styled.div`
      background-color: rgba(2,43,95,255);
 `;
 
-export const Title = styled.h1`
-    display: flex;
-    justify-content: center;
-     padding: 2.5rem;
-
-`;
 
 export const Card = styled.div`
     display: flex;
@@ -39,5 +33,9 @@ padding: 0.5rem;
 
 export const Typography = styled.h1`
     padding: 2rem;
+
+`;
+
+export const Modal = styled.div`
 
 `;

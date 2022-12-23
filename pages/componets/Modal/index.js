@@ -1,11 +1,12 @@
 import * as S from "./style"
+import React from "react"
 
 
-function Modal({ imagem, name, isOpen, setIsOpen }) {
+function Modal({ imagem, name, isOpen, setIsOpen, Comics, Eventos, Series, Histórias, Descrição }) {
 
 	return (
 		<>
-			{ isOpen && (
+			{isOpen && (
 				<S.Cardmodal>
 					<S.Buttonclose>
 						<button onClick={() => setIsOpen(false)}>X</button>
@@ -14,10 +15,11 @@ function Modal({ imagem, name, isOpen, setIsOpen }) {
 						<img src={imagem} alt={name} />
 					</S.Picturemodal>
 					<S.Informationmodal>
-						<p>Comics: {}</p>
-						<p>Eventos: {}</p>
-						<p>Series: {}</p>
-						<p>Histórias: {}</p>
+						<p>Descrição:{Descrição}</p>
+						<p>Comics: {Comics}</p>
+						<p>Eventos: {Eventos}</p>
+						<p>Series: {Series}</p>
+						<p>Histórias: {Histórias}</p>
 					</S.Informationmodal>
 				</S.Cardmodal>
 			)}
