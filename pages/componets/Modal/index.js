@@ -11,10 +11,8 @@ function Modal({ imagem, name, isOpen, setIsOpen, Comics, Eventos, Series, Hist�
 					<S.Buttonclose>
 						<button onClick={() => setIsOpen(false)}>X</button>
 					</S.Buttonclose>
-					<S.Picturemodal>
-						<img src={imagem} alt={name} />
-					</S.Picturemodal>
 					<S.Informationmodal>
+						<p>nome:{name}</p>
 						<p>Descrição:{Descrição}</p>
 						<p>Comics: {Comics}</p>
 						<p>Eventos: {Eventos}</p>

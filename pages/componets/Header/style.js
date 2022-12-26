@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const Container = styled.div`
 display: flex;
 align-items: center;
+background-color: red;
 `;
 
 export const Title = styled.h1`
@@ -11,6 +12,11 @@ export const Title = styled.h1`
      padding: 2.5rem;
 `;
 
-export const Imput = styled.input`
+export const button = styled.button`
  height: 20px;
+ border: none;
+ background: transparent;
+ cursor: pointer;
+ height: 100px;
+ width: 140px;
 `;

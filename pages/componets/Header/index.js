@@ -4,7 +4,11 @@ export default function Header() {
   return (
     <S.Container>
       <S.Title>MYSUPERHERO</S.Title>
-      <S.Imput type={"seacrh"} placeholder={"Digite seu personagem"} />
+      <S.button>Comics</S.button>
+      <S.button>Eventos</S.button>
+      <S.button>Series</S.button>
+      <S.button>Histórias</S.button>
+
     </S.Container>
   )
 

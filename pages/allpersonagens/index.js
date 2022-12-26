@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import React from "react";
 import { useEffect, useState } from "react";
 import Api from "../../services/api";
@@ -9,6 +10,12 @@ import Modal from "../componets/Modal";
 export default function allpersonagens() {
   const [answer, setAnswer] = useState()
   const [modasIsOpen, SetModalIsOpen] = useState(false)
+  const [value, setValue] = useState()
+
+      const onItemClicked = (item) => {
+        setItemSelecionado(item);
+        setIsOpen(true);
+    }
 
   const selectPerson = () => {
     SetModalIsOpen(true)
@@ -19,7 +26,6 @@ export default function allpersonagens() {
     })
       .then(response => {
         setAnswer(response?.data?.data?.results);
-        console.log(response, 'requisição');
       })
 
   }
@@ -35,39 +41,21 @@ console.log(answer, 'answer');
       <GlobalStyle />
       <Header />
       <S.Card>
-        {answer?.map((item) => {
+        {answer?.map((item, index) => {
           return (
-            <S.Box onClick={() => selectPerson(item) }>
+            <S.Box  
+            key={index}
+            onClick={() => {selectPerson(item), setValue()}}>
               <S.Imagem src={`${item?.thumbnail?.path}/portrait_uncanny.${item?.thumbnail?.extension}`} />
               <S.Typography>{item?.name}</S.Typography>
+              <S.Typography>{item?.description}</S.Typography>
+
+              
             </S.Box>
           )
         })}
       </S.Card>
 
-      <S.Modal>
-        {
-          answer &&
-          <Modal
-            Descrição={answer.map(() =>{
-              return(
-                <></>
-              )
-            })}
-            Comics={answer?.[3]?.comics?.items.map((item) =>{
-              console.log(item, 'items')
-              return(
-                <p>{item.name}</p>
-                )
-              })}
-            Eventos={2}
-            Series={2}
-            Histórias={2}
-            setIsOpen={SetModalIsOpen}
-            isOpen={modasIsOpen}
-          />
-        }
-      </S.Modal>
 
     </S.Container>
   )
