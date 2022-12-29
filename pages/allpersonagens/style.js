@@ -27,7 +27,7 @@ export const Box = styled.div`
 
 export const Imagem = styled.img`
      border-radius:20px;
-padding: 0.5rem;
+     padding: 0.5rem;
 
 `;
 
