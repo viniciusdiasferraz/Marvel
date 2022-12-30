@@ -1,21 +1,34 @@
-import * as S from "../styles/indexstyle"
-import { GlobalStyle } from "../styles/globalstyle"
-import React, { useState } from "react"
-import Router  from "next/router"
+import * as S from "../styles/indexstyle";
+import { GlobalStyle } from "../styles/globalstyle";
+import React, { useState } from "react";
+import Router from "next/router";
 
 export default function Home() {
+  const [search, setSearch] = useState("");
 
-const [search, setSearch]= useState("")
-
-return (
-  <>
+  return (
+    <>
       <GlobalStyle />
       <S.Container>
         <S.Box>
-          <S.Imput  onChange={(e) => setSearch(e.target.value.toLocaleLowerCase())} type={"seacrh"} placeholder={"Digite seu personagem"} />
-          <S.Button onClick={() =>  Router.push(`/allpersonagens?name=${search}`)}>Pesquisar</S.Button>
+          <S.Imput
+            onChange={(e) => setSearch(e.target.value.toLocaleLowerCase())}
+            type={"seacrh"}
+            placeholder={"Digite seu personagem"}
+          />
+          {search.length !== 0? (
+          <S.Button
+          onClick={() => Router.push(`/allpersonagens?name=${search}`)}>
+          Pesquisar
+        </S.Button>
+          ) : (
+            <S.Button>
+            Pesquisar
+          </S.Button>
+          )}
+
         </S.Box>
       </S.Container>
     </>
-  )
+  );
 }

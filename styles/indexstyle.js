@@ -7,30 +7,31 @@ export const Container = styled.div`
   background-position: center;
 `;
 export const Img = styled.img`
-position: absolute;
-border-radius: 20px;
-width: 250px;
+  position: absolute;
+  border-radius: 20px;
+  width: 250px;
 `;
 
 export const Box = styled.div`
-display: flex;
-justify-content: center;
-height: 80%;
-width: 17%;
-align-items: flex-end;
+  display: flex;
+  justify-content: center;
+  height: 80%;
+  width: 0px;
+  align-items: flex-end;
 `;
 
-
-
 export const Imput = styled.input`
- height: 20px;
+  height: 33px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  border: none;
 `;
 
 export const Button = styled.button`
- height: 20px;
-
+  height: 35px;
+  background-color: red;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  color: white;
+  cursor: pointer;
 `;
-
-
-
-
