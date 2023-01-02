@@ -5,6 +5,18 @@ export const Container = styled.div`
   width: 100%;
   height: 1007px;
   background-position: center;
+  
+  @media(max-width: 768px){
+    background-image: url(https://i.pinimg.com/originals/56/a9/04/56a904ec375d24a9a9433960ccd51d20.jpg);
+    background-repeat: no-repeat;
+    background-color: black;
+  }
+  @media(max-width: 425px){
+    background-image: url(https://thypix.com/wp-content/uploads/2022/04/marvel-phone-wallpaper-thypix-84-394x700.jpg);
+    background-color: rgba(236,50,55,255);
+    height: 100vh;
+  }
+
 `;
 export const Img = styled.img`
   position: absolute;
@@ -12,12 +24,19 @@ export const Img = styled.img`
   width: 250px;
 `;
 
-export const Box = styled.div`
+export const Box = styled.div`  
   display: flex;
   justify-content: center;
   height: 80%;
   width: 0px;
   align-items: flex-end;
+  @media(max-width: 425px){
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-end;
+    height: 88%;
+    width: 68%;
+  }
 `;
 
 export const Imput = styled.input`
@@ -25,6 +44,10 @@ export const Imput = styled.input`
   border-radius: 5px 0 0 5px;
   outline: none;
   border: none;
+  @media(max-width: 425px){
+    width: 285px;
+    border-radius:5px;
+  }
 `;
 
 export const Button = styled.button`
@@ -34,4 +57,9 @@ export const Button = styled.button`
   border-radius: 0 5px 5px 0;
   color: white;
   cursor: pointer;
+  @media(max-width: 425px){
+    width: 200px;
+    border-radius:5px;
+    margin-top: 10px;
+  }
 `;
