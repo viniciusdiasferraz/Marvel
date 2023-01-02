@@ -30,7 +30,6 @@ export default function Descriptions() {
     selectPerson();
   }, []);
 
-  console.log(answer, "answer");
 
   return (
     <S.Container>
