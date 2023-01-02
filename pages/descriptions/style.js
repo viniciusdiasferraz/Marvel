@@ -76,7 +76,7 @@ export const Box = styled.div`
     border-radius: 0 0 20px 20px;
   }
   @media(max-width:375px){
-    width: 290px;
+    width: 281px;
     border-radius: 0 0 20px 20px
   }
   @media(max-width:320px){
